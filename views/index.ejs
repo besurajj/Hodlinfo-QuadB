@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HodlInfo</title>
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+         html,
+ body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+ }
+
+ body {
+      background-color: #191d28;
+      font-family: "Oswald", sans-serif;
+      color: white;
+ }
+
+ main {
+      flex: 1;
+      height: fit-content;
+ }
+
+ .home-footer {
+      width: 100%;
+      height: 47px;
+      background-color: #191d28;
+      text-align: center;
+      position: relative;
+      bottom: 15px;
+ }
+
+ select,
+ option {
+      color: white;
+      background-color: #2e3241;
+ }
+
+ ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin-top: 10px;
+      list-style: none;
+ }
+
+ .dropdown-menu .dropdown-item {
+      background-color: white;
+ }
+
+ .dropdown {
+      margin-left: 20px;
+ }
+
+ .dropdown-item:hover {
+      background-color: #90cbff;
+ }
+
+ .telegram-btn {
+      background-color: #3dc6c1;
+      color: white;
+      width: 150px;
+      height: 35px;
+      border-radius: 10px;
+      border: none;
+      margin-left: -110px;
+      position: absolute;
+ }
+
+ a {
+      text-decoration: none;
+ }
+
+ .option {
+      margin-left: 200px;
+ }
+
+ .timer-circle {
+      position: relative;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 4px solid #3dc6c1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      color: cyan;
+      margin-right: 125px;
+ }
+
+ .right-nav {
+      margin-left: 10px;
+ }
+
+ header {
+      align-content: start;
+ }
+
+ .custom-margin {
+      margin-left: -10px;
+ }
+
+ .first-btn {
+      margin-left: 25px;
+ }
+
+ .best-price {
+      font-size: 3em;
+ }
+
+ .hero-main {
+      padding-top: 10px;
+ }
+
+ .hero {
+      height: 80px;
+      text-align: center;
+      align-items: center;
+ }
+
+ .hero .hero-list {
+      font-size: 40px;
+      color: #3dc6c1;
+ }
+
+ .list {
+      font-size: 18px;
+      font-weight: bold;
+ }
+
+ .list th {
+      color: #3b4157;
+ }
+
+ .hero-list-description {
+      color: #3b4157;
+ }
+
+ .holdings {
+      font-size: 2em;
+      color: #3dc6c1;
+ }
+
+ .best-price-font {
+      color: #3b4157;
+      font-size: 1.2em;
+      margin-top: -20px;
+ }
+
+ .middle-best-price {
+      margin-top: 20px;
+ }
+
+ .col-2 {
+      margin-top: 25px;
+ }
+
+ .avgtext {
+      font-size: 1em;
+ }
+
+ .home-btn {
+      color: #3dc6c1;
+      border: 2px solid #3dc6c1;
+      background-color: transparent;
+      padding: 6px 20px;
+      border-radius: 5px;
+ }
+
+ .HodImage {
+      padding: 10px;
+      height: 55;
+      margin-top: 20px;
+      margin-left: 10px;
+ }
+
+ table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 20px;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      
+ }
+
+ th,
+ td {
+      border: none;
+      padding: 15px;
+      text-align: left;
+      font-size: 16px;
+      text-align: center;
+ }
+
+ th {
+      background-color: #1c1e26;
+      color: #bbbbbb;
+      text-transform: uppercase;
+      font-weight: bold;
+ }
+
+ tbody tr {
+      background-color: #232432;
+      border-radius: 8px;
+ }
+
+ tbody tr:nth-child(even) {
+      background-color: #191d28;
+ }
+
+ tbody tr td {
+      position: relative;
+      font-size: 16px;
+      color: #fff;
+ }
+
+ tbody tr:hover {
+      background-color: #1c1e26;
+ }
+
+ td:first-child {
+      font-weight: bold;
+      font-size: 18px;
+ }
+
+ td:nth-child(5) {
+      font-weight: bold;
+      font-size: 18px;
+      color: #ff4c4c;
+ }
+
+ td:nth-child(5).positive {
+      color: #00d084;
+ }
+
+ td:nth-child(6) {
+      font-weight: bold;
+      font-size: 18px;
+      color: #ff4c4c;
+ }
+
+ td:nth-child(6).positive {
+      color: #00d084;
+ }
+
+ td {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ }
+
+ thead th {
+      padding: 15px 20px;
+      font-size: 16px;
+ }
+
+ tbody tr {
+      padding: 10px 0;
+ }
+
+ .dropdown-menu {
+      width: fit-content;
+ }
+
+ 
+
+ @media (max-width: 1200px) {
+      .option {
+           margin-left: 100px;
+      }
+
+      .hero .hero-list {
+           font-size: 20px;
+      }
+
+      .table-container {
+           max-height: 250px;
+      }
+ }
+
+ @media (max-width: 992px) {
+      ul {
+           flex-direction: column;
+           align-items: center;
+      }
+
+      .option {
+           margin-left: 0;
+           margin-top: 10px;
+      }
+
+      .telegram-btn {
+           width: 180px;
+           height: 45px;
+      }
+
+      .timer-circle {
+           width: 35px;
+           height: 35px;
+           font-size: 18px;
+      }
+ }
+
+ @media (max-width: 768px) {
+      .hero {
+           height: auto;
+           padding: 10px 0;
+      }
+
+      .hero .hero-list {
+           font-size: 18px;
+      }
+
+      .list {
+           font-size: 16px;
+      }
+ }
+
+ @media (max-width: 576px) {
+      .hero-main {
+           padding-top: 0;
+      }
+
+      .telegram-btn {
+           width: 150px;
+           height: 40px;
+           font-size: 14px;
+      }
+
+      .timer-circle {
+           width: 30px;
+           height: 30px;
+           font-size: 16px;
+      }
+
+      .table th,
+      .table td {
+           font-size: 12px;
+      }
+
+      .home-btn {
+           padding: 4px 15px;
+           font-size: 14px;
+      }
+ }
+
+ @media (max-width: 400px) {
+      .hero .hero-list {
+           font-size: 16px;
+      }
+
+      .timer-circle {
+           font-size: 14px;
+      }
+ }
+
+ .table-container {
+      max-height: 300px;
+      overflow-y: auto;
+      margin-top: 0;
+      /* align-content: center; */
+ }
+
+ .table {
+      margin-top: 0;
+ }
+
+ .dark-theme {
+      background-color: aliceblue;
+      color: black;
+ }
+
+ .dark-theme .body {
+      background-color: white;
+ }
+
+ .usd {
+      margin-left: 20px;
+      box-sizing: border-box;
+ }
+
+ .switch {
+      position: relative;
+      margin-top: 5px;
+      display: inline-block;
+      width: 58px;
+      height: 30px;
+ }
+
+ .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+ }
+
+ .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #2a2c3a;
+      transition: 0.4s;
+      border-radius: 24px;
+ }
+
+ .slider::before {
+      position: absolute;
+      content: "";
+      height: 28px;
+      width: 30px;
+      left: 2px;
+      bottom: 2px;
+      background-color: #5de8e3;
+      transition: 0.4s;
+      border-radius: 50%;
+ }
+
+ input:checked+.slider {
+      background-color: #232432;
+ }
+
+ input:checked+.slider::before {
+      transform: translateX(26px);
+ }
+
+ .dark *{
+    background-color: whitesmoke;
+ }
+    </style>
+</head>
+  <body>
+    <header>
+      <nav class="mt-0">
+        <ul>
+          <a href="#">
+            <li>
+              <img
+                src="/HODLINFO.8f78fc06-2.png"
+                alt=""
+                class="HodImage"
+                height="55"
+              />
+            </li>
+          </a>
+          <div class="d-flex option mt-4">
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle custom-margin first-btn"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                INR
+              </button>
+              <ul class="dropdown-menu usd-drop">
+                <li class="usd">USD</li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle custom-margin"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                BTC
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">BTC</a></li>
+                <li><a class="dropdown-item" href="#">ETH</a></li>
+                <li><a class="dropdown-item" href="#">USDT</a></li>
+                <li><a class="dropdown-item" href="#">XRP</a></li>
+                <li><a class="dropdown-item" href="#">TRX</a></li>
+                <li><a class="dropdown-item" href="#">DASH</a></li>
+                <li><a class="dropdown-item" href="#">ZEC</a></li>
+                <li><a class="dropdown-item" href="#">XEM</a></li>
+                <li><a class="dropdown-item" href="#">IOST</a></li>
+                <li><a class="dropdown-item" href="#">WIN</a></li>
+                <li><a class="dropdown-item" href="#">BTT</a></li>
+                <li><a class="dropdown-item" href="#">WRX</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle custom-margin"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <a href="https://wazirx.com/signup"></a>
+                BUY ETH
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex justify-content-end mt-4">
+            <div class="timer-circle" id="timer">59</div>
+            <a href="#" class="right-nav">
+              <button type="button" class="telegram-btn">
+                <img src="tele.png" alt="" width="20px" />
+                Connect Telegram
+              </button>
+            </a>
+            <div class="form-check form-switch mx-4 right-nav">
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <main class="hero-main">
+      <div class="row m-0 p-0 text-white hero">
+        <div class="col-2">
+          <div>
+            <span class="holdings">0.72%</span>
+            <div class="hero-list-description">5 min</div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div>
+            <span class="holdings">1.25%</span>
+            <div class="hero-list-description">1 Hour</div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="middle-best-price">
+            <div class="best-price-font">Best Price to Trade</div>
+            <span class="best-price">₹ 40,20,649</span>
+            <div class="hero-list-description avgtext">
+              Average BTC/INR net price including commission
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div>
+            <span class="holdings">8.6%</span>
+            <div class="hero-list-description">1 Day</div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div>
+            <span class="holdings">16.9%</span>
+            <div class="hero-list-description">7 Days</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="table">
+      <div class="table-container">
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr class="list top-list">
+              <th>#</th>
+              <th>Platform</th>
+              <th>Last Traded Price</th>
+              <th>Buy / Sell Price</th>
+              <th>Difference</th>
+              <th>Savings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% top10Results.forEach((result, index) => { %>
+            <tr class="list">
+              <td><%= index + 1 %></td>
+              
+
+            <!-- use this line if you want to set logo of cryptocoins -->
+             <!-- <td>
+                 <img
+                  src="<%= result.image %>"
+                  alt="<%= result.name %> logo"
+                  style="width: 30px; height: 30px; margin-right: 10px"
+                />
+                <%= result.name %>
+              </td>  -->
+
+              <td><%= result.name %></td>
+
+              <td>₹ <%= parseFloat(result.last).toLocaleString() %></td>
+              <td>
+                ₹ <%= parseFloat(result.buy).toLocaleString() %> / ₹ <%=
+                parseFloat(result.sell).toLocaleString() %>
+              </td>
+              <td><%= result.difference %>%</td>
+              <td>₹ <%= result.savings %></td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer class="home-footer">
+      <div class="row mx-4">
+        <div class="col">
+          <button type="button" class="home-btn mt-3">
+            Add hodlinfo to home screen
+          </button>
+          <p class="mt-4">Copyright © 2024</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function startTimer(duration, display) {
+        var timer = duration;
+        setInterval(function () {
+          display.textContent = timer;
+
+          if (--timer < 0) {
+            timer = duration;
+          }
+        }, 1000);
+      }
+
+      window.onload = function () {
+        var display = document.getElementById("timer");
+        startTimer(59, display);
+      };
+    </script>
+
+    <script>
+   function toggleTheme() {
+    const body = document.body;
+
+    // Toggle between dark and light theme
+    if (body.classList.contains('dark-theme')) {
+      body.classList.remove('dark-theme');
+      body.classList.add('light-theme');
+    } else {
+      body.classList.remove('light-theme');
+      body.classList.add('dark-theme');
+    }
+  }
+
+    </script>
+  </body>
+</html>
